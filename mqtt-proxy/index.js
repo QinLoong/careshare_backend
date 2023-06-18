@@ -48,5 +48,8 @@ server.on('clientConnected', function (client) {
   
     connector.delete(client.id);
   });
-  
+  server.on('published', (packet, client) => {
+    if (!packet || !client) return;
+    console.log('发送端：', client.id);
+    console.log('published', packet);
   

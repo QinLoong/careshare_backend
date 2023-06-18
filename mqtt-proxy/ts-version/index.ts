@@ -59,7 +59,7 @@ server.on('subscribed', (topic: string, client: Client) => {
 
 function setup() {
     console.log(`### Mosca server is up and running -- port: ${port}`);
-  }
+}
   
 function isSendFail(clientId) {
     const isHardWareClient = hardwareClientId === clientId;
