@@ -52,4 +52,16 @@ server.on('clientConnected', function (client) {
     if (!packet || !client) return;
     console.log('发送端：', client.id);
     console.log('published', packet);
-  
+  /*   const { topic } = packet;
+  const { id: clientId } = client; */
+  const topic=packet.topic
+  const id=client.id
+  // 发射端为设备端
+  if (hardwareClientId.includes(clientId)) {
+    // 如果发射端为设备端，则判断下failMsgTopicMap是否有数据，有则进行发送
+    isConnection = true;
+    // globEventEmitter.emit('server', true, topic);
+    server.publish({
+      topic: 'server-connection',
+      payload: new Buffer('1'),
+    });
