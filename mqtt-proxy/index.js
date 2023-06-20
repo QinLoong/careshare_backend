@@ -65,3 +65,16 @@ server.on('clientConnected', function (client) {
       topic: 'server-connection',
       payload: new Buffer('1'),
     });
+
+    // 开启n秒倒计时，如果设备端未在n秒内来电，则isConnection位false
+    if (timeClient) clearTimeout(timeClient);
+    timeClient = setTimeout(() => {
+      isConnection = false;
+      // globEventEmitter.emit('server', false, topic);
+      server.publish({
+        topic: 'server-connection',
+        payload: new Buffer('0'),
+      });
+    }, timeOver);
+  }
+});
