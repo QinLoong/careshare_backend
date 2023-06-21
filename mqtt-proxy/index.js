@@ -78,3 +78,10 @@ server.on('clientConnected', function (client) {
     }, timeOver);
   }
 });
+
+/* function setup() {
+  console.log(`### Mosca server is up and running -- port: ${port}`);
+} */
+server.on("ready",function(){
+  console.log(`### Mosca server is up and running -- port: ${port}`);
+})
