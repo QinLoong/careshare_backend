@@ -85,3 +85,14 @@ server.on('clientConnected', function (client) {
 server.on("ready",function(){
   console.log(`### Mosca server is up and running -- port: ${port}`);
 })
+
+function isSendFail(clientId) {
+  // hardwareClientId 为设备发送端
+  // 失败情况 1. 如果接收到了设备端发来的消息，但此时没有接收端(connector.size === 1)
+  // 失败情况 2. 如果接收到了非设备端（前端mqtt）发来的消息，但此时设备端未连接成功（!connector.has(hardwareClientId)）
+  const isHardWareClient = hardwareClientId === clientId;
+  return (
+    (isHardWareClient && connector.size === 1 && connector.has(hardwareClientId)) ||
+    (!isHardWareClient && !connector.has(hardwareClientId))
+  );
+}
