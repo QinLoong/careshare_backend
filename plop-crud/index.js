@@ -21,3 +21,4 @@ module.exports = {
         validate: (v) => (!v || v.trim() === '' ? '表名不能为空' : true),
       },
     ],
+    actions: (data) => {
