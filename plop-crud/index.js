@@ -22,3 +22,4 @@ module.exports = {
       },
     ],
     actions: (data) => {
+        let { tablePrefix = '', tables } = data;
