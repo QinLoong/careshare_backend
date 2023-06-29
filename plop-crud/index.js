@@ -23,3 +23,5 @@ module.exports = {
     ],
     actions: (data) => {
         let { tablePrefix = '', tables } = data;
+        tablePrefix = tablePrefix.trim();
+        tables = tables.trim();
