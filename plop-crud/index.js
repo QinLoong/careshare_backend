@@ -25,3 +25,7 @@ module.exports = {
         let { tablePrefix = '', tables } = data;
         tablePrefix = tablePrefix.trim();
         tables = tables.trim();
+
+        const tableList = tables.split(',') || [];
+        const bigCamelTableList = tableList.map((table) => bigCamelCase(table));
+        const actions = [];
