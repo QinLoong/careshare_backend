@@ -29,3 +29,5 @@ module.exports = {
         const tableList = tables.split(',') || [];
         const bigCamelTableList = tableList.map((table) => bigCamelCase(table));
         const actions = [];
+
+        tableList.forEach((tableName, index) => {
