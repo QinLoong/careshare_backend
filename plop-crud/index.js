@@ -31,3 +31,4 @@ module.exports = {
         const actions = [];
 
         tableList.forEach((tableName, index) => {
+            const bigCamelTableName = bigCamelTableList[index];
