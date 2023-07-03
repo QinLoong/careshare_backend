@@ -32,3 +32,5 @@ module.exports = {
 
         tableList.forEach((tableName, index) => {
             const bigCamelTableName = bigCamelTableList[index];
+            const acitonList = [
+                {
