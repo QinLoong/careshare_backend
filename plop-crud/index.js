@@ -34,3 +34,5 @@ module.exports = {
             const bigCamelTableName = bigCamelTableList[index];
             const acitonList = [
                 {
+                    type: 'add',
+                    path: `src/controller/${bigCamelTableName}Controller.ts`,
