@@ -37,3 +37,8 @@ module.exports = {
                     type: 'add',
                     path: `src/controller/${bigCamelTableName}Controller.ts`,
                     templateFile: 'plop-crud/template/controller.hbs',
+                    data: {
+                        tablePrefix,
+                        tableName,
+                        bigCamelTableName,
+                    },
