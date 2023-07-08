@@ -42,4 +42,6 @@ module.exports = {
                         tableName,
                         bigCamelTableName,
                     },
-                }
+                },
+                {
+                    type: 'add',
