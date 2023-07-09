@@ -45,3 +45,4 @@ module.exports = {
                 },
                 {
                     type: 'add',
+                    path: `src/dao/${bigCamelTableName}Dao.ts`,
