@@ -52,3 +52,5 @@ module.exports = {
                         tableName,
                         bigCamelTableName,
                     },
+                },
+            ];
