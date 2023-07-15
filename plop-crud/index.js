@@ -56,3 +56,5 @@ module.exports = {
             ];
             actions.push(...acitonList);
         });
+
+        return actions;
