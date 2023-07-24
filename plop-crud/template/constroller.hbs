@@ -5,3 +5,6 @@ import { {{bigCamelTableName}}Dao } from '../dao/{{bigCamelTableName}}Dao';
 export default class {{bigCamelTableName}}Controller {
  private readonly {{tableName}}Dao = new {{bigCamelTableName}}Dao();
  @Post('/add{{bigCamelTableName}}')
+ async add{{bigCamelTableName}}(@Body() body) {
+    return await this.{{tableName}}Dao.insert(body);
+ }
