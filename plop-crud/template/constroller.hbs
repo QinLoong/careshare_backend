@@ -8,3 +8,5 @@ export default class {{bigCamelTableName}}Controller {
  async add{{bigCamelTableName}}(@Body() body) {
     return await this.{{tableName}}Dao.insert(body);
  }
+ @Post('/find{{bigCamelTableName}}ById')
+
