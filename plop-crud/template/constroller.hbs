@@ -12,5 +12,6 @@ export default class {{bigCamelTableName}}Controller {
  async find{{bigCamelTableName}}(@Query('id') id) {
  return await this.{{tableName}}Dao.selectOne(id);
  }
- 
+
+ @Post('/find{{bigCamelTableName}}List')
 
