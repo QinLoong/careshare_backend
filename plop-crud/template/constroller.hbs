@@ -15,3 +15,4 @@ export default class {{bigCamelTableName}}Controller {
 
  @Post('/find{{bigCamelTableName}}List')
  async find{{bigCamelTableName}}List(@Body() body) {
+    const { page, size, ...queryParams } = body;
