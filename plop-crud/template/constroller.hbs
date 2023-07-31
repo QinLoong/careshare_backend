@@ -16,3 +16,5 @@ export default class {{bigCamelTableName}}Controller {
  @Post('/find{{bigCamelTableName}}List')
  async find{{bigCamelTableName}}List(@Body() body) {
     const { page, size, ...queryParams } = body;
+    return await this.{{tableName}}Dao.selectPage(queryParams, { page, size }, { dirc: 'desc', field: 'ctime' });
+  }
