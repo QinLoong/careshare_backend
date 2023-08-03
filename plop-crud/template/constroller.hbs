@@ -21,3 +21,5 @@ export default class {{bigCamelTableName}}Controller {
 
  @Post('/edit{{bigCamelTableName}}')
  async edit{{bigCamelTableName}}(@Body() body) {
+    return await this.{{tableName}}Dao.update(body.id, body);
+  }
