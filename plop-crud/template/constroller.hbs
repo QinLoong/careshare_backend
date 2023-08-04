@@ -23,3 +23,5 @@ export default class {{bigCamelTableName}}Controller {
  async edit{{bigCamelTableName}}(@Body() body) {
     return await this.{{tableName}}Dao.update(body.id, body);
   }
+
+@Post('/delete{{bigCamelTableName}}')
