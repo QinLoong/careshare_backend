@@ -26,3 +26,4 @@ export default class {{bigCamelTableName}}Controller {
 
 @Post('/delete{{bigCamelTableName}}')
 async delete{{bigCamelTableName}}(@Query('id') id) {
+    return await this.{{tableName}}Dao.deleteById(id);
