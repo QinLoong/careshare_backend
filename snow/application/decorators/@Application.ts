@@ -5,3 +5,4 @@ import path from 'path';
 import { useController } from '../../controller';
 import Logger from '../../logger';
 import fs from 'fs';
+import { isFunction } from '../../utils';
