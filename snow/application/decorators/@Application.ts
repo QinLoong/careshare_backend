@@ -6,3 +6,4 @@ import { useController } from '../../controller';
 import Logger from '../../logger';
 import fs from 'fs';
 import { isFunction } from '../../utils';
+import { Configuration } from '../../configuration';
