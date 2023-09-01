@@ -7,3 +7,8 @@ import Logger from '../../logger';
 import fs from 'fs';
 import { isFunction } from '../../utils';
 import { Configuration } from '../../configuration';
+
+/**
+ * 启动注解
+ * @param controllerScan controller扫码路径，default: src/controller
+ */
