@@ -14,3 +14,6 @@ import { Configuration } from '../../configuration';
  */
 
 export function Application(controllerScanPath = './src/controller'): ClassDecorator {
+  return (target: Function) => {
+    const configuration = new Configuration();
+    const { rootPath = '/', port = '3000' } = configuration.getConfig();
