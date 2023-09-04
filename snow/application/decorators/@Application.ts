@@ -17,3 +17,5 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
   return (target: Function) => {
     const configuration = new Configuration();
     const { rootPath = '/', port = '3000' } = configuration.getConfig();
+    const app = express();
+    app.use(cors());
