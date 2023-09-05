@@ -19,3 +19,5 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
     const { rootPath = '/', port = '3000' } = configuration.getConfig();
     const app = express();
     app.use(cors());
+    app.use('/static', express.static('public'));
+    app.use(bodyParser.json());
