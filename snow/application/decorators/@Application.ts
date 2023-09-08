@@ -23,3 +23,5 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(rootPath, useController(controllerScanPath));
+
+    target.prototype.app = app;
