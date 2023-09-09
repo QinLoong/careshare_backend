@@ -25,3 +25,6 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
     app.use(rootPath, useController(controllerScanPath));
 
     target.prototype.app = app;
+
+    const before = target.prototype.before;
+    const after = target.prototype.after;
