@@ -28,3 +28,7 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
 
     const before = target.prototype.before;
     const after = target.prototype.after;
+
+    if (isFunction(before)) {
+      before(app);
+    }
