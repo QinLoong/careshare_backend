@@ -32,3 +32,5 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
     if (isFunction(before)) {
       before(app);
     }
+
+    app.listen(port, () => {
