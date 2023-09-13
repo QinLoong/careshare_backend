@@ -35,3 +35,4 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
 
     app.listen(port, () => {
       if (fs.existsSync(path.join(process.cwd(), './banner.txt'))) {
+        console.log(fs.readFileSync(path.join(process.cwd(), './banner.txt'), 'utf8'));
