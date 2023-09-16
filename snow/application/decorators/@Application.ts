@@ -39,3 +39,5 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
       } else if (fs.existsSync(path.join(__dirname, './banner.txt'))) {
         console.log(fs.readFileSync(path.join(__dirname, './banner.txt'), 'utf8'));
       }
+
+      Logger.info(`### snow has been to starting -- http://localhost:${port}${rootPath}`);
