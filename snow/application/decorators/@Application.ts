@@ -41,3 +41,6 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
       }
 
       Logger.info(`### snow has been to starting -- http://localhost:${port}${rootPath}`);
+      if (isFunction(after)) {
+        after(app);
+      }
