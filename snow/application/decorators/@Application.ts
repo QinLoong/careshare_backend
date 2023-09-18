@@ -44,3 +44,6 @@ export function Application(controllerScanPath = './src/controller'): ClassDecor
       if (isFunction(after)) {
         after(app);
       }
+  });
+};
+}
