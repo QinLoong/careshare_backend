@@ -14,3 +14,5 @@ export interface DatabaseOptions {
   password: string;
   database: string;
 }
+
+export class Configuration {
