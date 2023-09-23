@@ -16,3 +16,4 @@ export interface DatabaseOptions {
 }
 
 export class Configuration {
+  private config: ConfigOptions;
