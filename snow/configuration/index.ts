@@ -17,3 +17,8 @@ export interface DatabaseOptions {
 
 export class Configuration {
   private config: ConfigOptions;
+
+  /**
+   * 获取配置
+   * @param expression 取值表达式 示例：obj.a.b
+   */
