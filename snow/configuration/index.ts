@@ -22,3 +22,4 @@ export class Configuration {
    * 获取配置
    * @param expression 取值表达式 示例：obj.a.b
    */
+  getConfig(expression?: string) {
