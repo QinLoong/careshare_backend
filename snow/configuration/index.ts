@@ -23,3 +23,11 @@ export class Configuration {
    * @param expression 取值表达式 示例：obj.a.b
    */
   getConfig(expression?: string) {
+    if (!this.config) {
+      const configPath = path.join(__dirname, '../../config');
+      if (fs.existsSync(`${configPath}.js`) || fs.existsSync(`${configPath}.ts`)) {
+        this.config = require(configPath).default || {};
+      } else {
+        this.config = {};
+      }
+    }
