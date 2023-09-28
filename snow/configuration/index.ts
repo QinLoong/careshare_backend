@@ -33,3 +33,5 @@ export class Configuration {
     }
     return this.parsePath(this.config, expression);
   }
+
+  private parsePath(obj, expression) {
