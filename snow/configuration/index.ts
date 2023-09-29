@@ -35,3 +35,5 @@ export class Configuration {
   }
 
   private parsePath(obj, expression) {
+    if (!expression) return obj;
+    const segments = expression.split('.');
