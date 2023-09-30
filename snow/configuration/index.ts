@@ -42,3 +42,5 @@ export class Configuration {
       obj = obj[key];
     }
     return obj;
+  }
+}
