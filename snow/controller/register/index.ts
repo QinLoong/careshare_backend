@@ -5,3 +5,5 @@ import { getInjectionsPerRequest, Injector } from '../decorators/injector';
 import { META_KEYS } from '../decorators/constants';
 import { errorLog, requestLog, resopseLog } from '../../logger/httpLogger';
 import path from 'path';
+
+const app = Router();
