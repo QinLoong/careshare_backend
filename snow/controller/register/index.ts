@@ -10,3 +10,7 @@ const app = Router();
 
 export function useController(controllerDir: string) {
   const controllers = getAllFiles(path.join(__dirname, `../../../${controllerDir}`), []);
+  
+  controllers.forEach((c) => {
+    const obj = require(c.path);
+    const controller = obj.default || class {};
