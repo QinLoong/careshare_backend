@@ -14,3 +14,6 @@ export function useController(controllerDir: string) {
   controllers.forEach((c) => {
     const obj = require(c.path);
     const controller = obj.default || class {};
+    // register api routes
+    const prefix = Reflect.getMetadata(META_KEYS.PREFIX, controller) || c.name;
+    const apiRoutes: Array<RouteDefinition> = Reflect.getMetadata(META_KEYS.ROUTES, controller) || [];
