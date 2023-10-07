@@ -17,3 +17,6 @@ export function useController(controllerDir: string) {
     // register api routes
     const prefix = Reflect.getMetadata(META_KEYS.PREFIX, controller) || c.name;
     const apiRoutes: Array<RouteDefinition> = Reflect.getMetadata(META_KEYS.ROUTES, controller) || [];
+    apiRoutes.forEach(({ methodName, requestMethod, path }) => {
+      const instance = Injector.resolve(controller);
+      const route = `${prefix}${path}`;
