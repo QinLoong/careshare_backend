@@ -20,3 +20,4 @@ export function useController(controllerDir: string) {
     apiRoutes.forEach(({ methodName, requestMethod, path }) => {
       const instance = Injector.resolve(controller);
       const route = `${prefix}${path}`;
+      app[requestMethod](route, async (req: Request, res: Response, next: NextFunction) => {
