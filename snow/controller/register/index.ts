@@ -21,3 +21,9 @@ export function useController(controllerDir: string) {
       const instance = Injector.resolve(controller);
       const route = `${prefix}${path}`;
       app[requestMethod](route, async (req: Request, res: Response, next: NextFunction) => {
+        try {
+          const startTime = requestLog(req, controller.name, methodName);
+          const injections = getInjectionsPerRequest({ instance, methodName, req, res, next });
+          const data = await instance[methodName](...injections);
+          res.json({ code: 200, data });
+          resopseLog(req, data, startTime);
