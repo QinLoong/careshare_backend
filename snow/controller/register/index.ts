@@ -27,3 +27,11 @@ export function useController(controllerDir: string) {
           const data = await instance[methodName](...injections);
           res.json({ code: 200, data });
           resopseLog(req, data, startTime);
+        } catch (error) {
+          res.status(500);
+          res.json({
+            code: error?.code || 400,
+            message: error?.message || 'system error',
+          });
+          errorLog(req, error);
+        }
