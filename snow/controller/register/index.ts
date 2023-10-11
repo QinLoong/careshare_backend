@@ -35,3 +35,9 @@ export function useController(controllerDir: string) {
           });
           errorLog(req, error);
         }
+      });
+    });
+  });
+
+  return app;
+}
