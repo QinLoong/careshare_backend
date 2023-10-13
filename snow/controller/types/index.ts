@@ -5,3 +5,5 @@ export enum HttpMethods {
   OPTIONS = 'options',
   DELETE = 'delete',
 }
+
+export interface RouteDefinition {
