@@ -7,3 +7,7 @@ export enum HttpMethods {
 }
 
 export interface RouteDefinition {
+  requestMethod: HttpMethods;
+  path: string;
+  methodName: string;
+}
