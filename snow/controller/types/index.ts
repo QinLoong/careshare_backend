@@ -11,3 +11,5 @@ export interface RouteDefinition {
   path: string;
   methodName: string;
 }
+
+export interface MethodDefinition {
