@@ -13,3 +13,6 @@ export interface RouteDefinition {
 }
 
 export interface MethodDefinition {
+  path: string;
+  method: HttpMethods;
+}
