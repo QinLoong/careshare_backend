@@ -16,3 +16,5 @@ export interface MethodDefinition {
   path: string;
   method: HttpMethods;
 }
+
+export interface InjectPerRequest {
