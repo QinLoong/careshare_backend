@@ -18,3 +18,5 @@ export interface MethodDefinition {
 }
 
 export interface InjectPerRequest {
+  instance: Function;
+  methodName: string;
