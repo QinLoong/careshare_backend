@@ -20,3 +20,6 @@ export interface MethodDefinition {
 export interface InjectPerRequest {
   instance: Function;
   methodName: string;
+  req: any;
+  res: any;
+  next: any;
