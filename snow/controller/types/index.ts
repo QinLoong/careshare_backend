@@ -23,3 +23,4 @@ export interface InjectPerRequest {
   req: any;
   res: any;
   next: any;
+}
