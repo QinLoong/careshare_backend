@@ -5,3 +5,5 @@ interface FileInfo {
   name: string;
   path: string;
 }
+
+export function getAllFiles(dirPath: string, arrayOfFiles: FileInfo[]): FileInfo[] {
