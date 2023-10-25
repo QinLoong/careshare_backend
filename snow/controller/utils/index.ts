@@ -17,3 +17,9 @@ export function getAllFiles(dirPath: string, arrayOfFiles: FileInfo[]): FileInfo
       if (fs.statSync(dirPath + '/' + file).isDirectory()) {
         arrayOfFiles = getAllFiles(dirPath + '/' + file, arrayOfFiles);
       } else {
+        arrayOfFiles.push({
+          path: path.join(dirPath, '/', file),
+          name: file.replace('.ts', '').replace('.js', '').replace('.tsx', ''),
+        });
+      }
+    });
