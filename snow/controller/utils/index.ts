@@ -23,3 +23,8 @@ export function getAllFiles(dirPath: string, arrayOfFiles: FileInfo[]): FileInfo
         });
       }
     });
+
+    
+  return arrayOfFiles;
+}
+
