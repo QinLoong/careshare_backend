@@ -23,3 +23,14 @@ export class DatabaseError extends Error {
     this.message = message || '数据库异常';
   }
 }
+
+/**
+ * 鉴权异常：适用于鉴权失败情况
+ */
+export class AuthError extends Error {
+  constructor(message?: string) {
+    super();
+    this.name = 'AuthFailure';
+    this.message = message || '鉴权失败';
+  }
+}
