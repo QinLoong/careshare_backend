@@ -34,3 +34,14 @@ export class AuthError extends Error {
     this.message = message || '鉴权失败';
   }
 }
+
+/**
+ * 数据权限：适用于当前用户没有数据权限的情况
+ */
+export class DataAuthError extends Error {
+  constructor(message?: string) {
+    super();
+    this.name = 'DataAuthFailure';
+    this.message = message || '当前用户没有该数据的权限';
+  }
+}
