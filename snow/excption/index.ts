@@ -45,3 +45,22 @@ export class DataAuthError extends Error {
     this.message = message || '当前用户没有该数据的权限';
   }
 }
+
+/**
+ * 系统异常：适用于无法预估的异常
+ * 使用示例：
+ * ```
+ * try{
+ *  ...
+ * } catch (error) {
+    throw new SystemError(`${error.name}:${error.message}`);
+  }
+ * ```
+ */
+  export class SystemError extends Error {
+    constructor(message?: string) {
+      super();
+      this.name = 'SystemError';
+      this.message = message || '系统异常';
+    }
+  }
