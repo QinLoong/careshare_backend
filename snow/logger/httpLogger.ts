@@ -14,4 +14,15 @@ export const requestLog = (request: Request, className: string, methodName: stri
   
   //   Logger.info(logMsg);
     return Date.now();
-  };
+};
+
+export const resopseLog = (request: Request, data: any, startTime: number) => {
+    //   const logMsg = `\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${request.url}响应结束<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    //   当前请求: ${request.method} - ${request.url}
+    //   IP: ${request.ip}
+    //   当前用户: 'coderixe'
+    //   响应时间：${Date.now() - startTime}ms
+    //   当前响应体: ${JSON.stringify(data)}
+    // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${request.url}响应结束<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<`;
+    //   Logger.info(logMsg);
+};
