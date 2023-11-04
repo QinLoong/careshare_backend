@@ -26,3 +26,14 @@ export const resopseLog = (request: Request, data: any, startTime: number) => {
     // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<${request.url}响应结束<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<`;
     //   Logger.info(logMsg);
 };
+
+export const errorLog = (request: Request, error: Error) => {
+  //   const logMsg = `\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  //   错误信息: ${error || 'system error'}
+  //   请求路径: ${request.originalUrl}
+  //   请求方法: ${request.method}
+  //   IP: ${request.ip}
+  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<`;
+  //   Logger.error(logMsg);
+    console.log(error);
+  };
