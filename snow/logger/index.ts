@@ -10,3 +10,7 @@ class Logger {
   static info(message: string) {
     this.runtimeLog('info', message);
   }
+
+  static warn(message: string) {
+    this.runtimeLog('warn', message);
+  }
