@@ -14,3 +14,7 @@ class Logger {
   static warn(message: string) {
     this.runtimeLog('warn', message);
   }
+
+  static error(message: string) {
+    this.runtimeLog('error', message);
+  }
