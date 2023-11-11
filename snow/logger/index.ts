@@ -18,3 +18,9 @@ class Logger {
   static error(message: string) {
     this.runtimeLog('error', message);
   }
+
+  static sql(sql: any, params: any) {
+    // const message = `执行sql:${sql} | 参数:${JSON.stringify(params)}`;
+    // this.runtimeLog('info', message);
+  }
+}
