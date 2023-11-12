@@ -24,3 +24,5 @@ class Logger {
     // this.runtimeLog('info', message);
   }
 }
+
+export default Logger;
