@@ -7,3 +7,12 @@ const wistonLogger: Logger = createLogger({
     format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     format.printf(({ level, message, timestamp }) => `${timestamp} [${level}] ${message}`),
     format.colorize({
+      all: true,
+      colors: {
+        debug: 'blue',
+        info: 'green',
+        warn: 'yellow',
+        error: 'red',
+      },
+    }),
+  ),
