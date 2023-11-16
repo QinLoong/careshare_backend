@@ -16,3 +16,14 @@ const wistonLogger: Logger = createLogger({
       },
     }),
   ),
+  transports: [
+    // new transports.File({ filename: './log/runtime_error.log', level: 'error' }),
+    // new DailyRotateFile({
+    //   filename: './log/runtime_%DATE%.log',
+    //   datePattern: 'YYYYMMDD',
+    //   zippedArchive: false,
+    //   maxSize: '5g',
+    //   maxFiles: '14d',
+    // }),
+  ],
+});
