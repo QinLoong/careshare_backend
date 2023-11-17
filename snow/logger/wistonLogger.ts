@@ -27,3 +27,7 @@ const wistonLogger: Logger = createLogger({
     // }),
   ],
 });
+
+if (process.env.NODE_ENV !== 'production') {
+  wistonLogger.add(new transports.Console());
+}
