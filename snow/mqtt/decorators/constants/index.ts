@@ -5,5 +5,5 @@ export const META_KEYS = {
   TOPICS: 'symbol:topics',
   MASSAGE_DATA: 'symbol:massage_data',
   CLIENT: 'symbol:client',
-  MQTT_INSTANCE: 'symbol:mqtt_instance',
+  
 };
