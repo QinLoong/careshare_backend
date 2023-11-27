@@ -7,3 +7,10 @@ import { META_KEYS } from './constants';
 export function MqttGateway(host: string, port: number, opts?: IClientOptions): ClassDecorator {
   if (!host) throw new Error('mqtt的host不能为空');
   if (!port) throw new Error('mqtt的port不能为空');
+
+   // 设置MQTT选项的clean属性为false，qos属性为1
+   const mqttOpts: IClientOptions = {
+    ...opts,
+    clean: false,
+    qos: 1
+  };
