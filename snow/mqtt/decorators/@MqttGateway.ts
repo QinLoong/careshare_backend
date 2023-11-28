@@ -14,3 +14,10 @@ export function MqttGateway(host: string, port: number, opts?: IClientOptions): 
     clean: false,
     qos: 1
   };
+
+  return function classDecorator(target: any): any {
+    Reflect.defineMetadata(META_KEYS.HOST, host, target);
+    Reflect.defineMetadata(META_KEYS.PORT, port, target);
+    Reflect.defineMetadata(META_KEYS.OPTS, mqttOpts, target);
+  };
+}
