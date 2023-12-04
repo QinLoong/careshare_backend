@@ -9,3 +9,4 @@ export function SubscribeMessage(topicName: string): MethodDecorator {
     topicsMap[topicName] = methodName;
     Reflect.defineMetadata(META_KEYS.TOPICS, topicsMap, target);
   };
+}
