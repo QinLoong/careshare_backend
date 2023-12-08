@@ -12,3 +12,6 @@ export function getInjections(instance: any, methodName: string, message: string
     const index = Reflect.getMetadata(META_KEYS.CLIENT, instance, methodName);
     props[index] = client;
   }
+
+  return props;
+}
